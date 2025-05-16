@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Infracciones</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../img/icono.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <h2><i class="bi bi-pencil-square"></i> Formulario de Infracciones</h2>
+                <form id="formulario">
+
+                    <!-- Nombre completo -->
+                    <label for="nombre"><i class="bi bi-person-fill"></i> Nombre Completo del Paletero</label>
+                    <input type="text" id="nombre" name="nombre" required autofocus>
+
+                    <!-- Tipo de documento -->
+                    <label for="tipo_documento"><i class="bi bi-card-heading"></i> Tipo de documento</label>
+                    <select id="tipo_documento" name="tipo_documento" required>
+                        <option value="">Selecciona uno</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="PAS">Pasaporte</option> 
+                        <option value="PPT">PPT</option>
+                        <option value="PEP">PEP</option>
+                    </select>
+
+                    <!-- Número de documento -->
+                    <label for="documento"><i class="bi bi-123"></i> Número de documento</label>
+                    <input type="text" id="documento" name="documento" required pattern="[0-9]{5,20}" title="Solo números (mínimo 5 dígitos)">
+
+                    <!-- Correo electrónico -->
+                    <label for="correo"><i class="bi bi-envelope-fill"></i> Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <!-- Teléfono -->
+                    <label for="telefono"><i class="bi bi-telephone-fill"></i> Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" required pattern="[0-9]{7,15}" title="Solo números (mínimo 7 dígitos)">
+
+                    <!-- Tipo de infracción -->
+                    <label for="infraccion"><i class="bi bi-exclamation-triangle-fill"></i> Tipo de infracción</label>
+                    <select id="infraccion" name="infraccion" required>
+                        <option value="">Selecciona una</option>
+                        <option value="Exceso de velocidad">Exceso de velocidad</option>
+                        <option value="Conducir sin licencia o con licencia vencida">Conducir sin licencia o con licencia vencida</option>
+                        <option value="Conducir en estado de embriaguez">Conducir en estado de embriaguez</option>
+                        <option value="Conducir sin seguro obligatorio">Conducir sin seguro obligatorio</option>
+                        <option value="Vehículo con documentación vencida o incompleta">Vehículo con documentación vencida o incompleta</option>
+                        <option value="Uso del celular mientras conduce">Uso del celular mientras conduce</option>
+                        <option value="Mal estacionado">Mal estacionado</option>
+                        <option value="No respetar señal">No respetar señal</option>
+                        <option value="Otro">Otro (Explicar en Observaciones)</option>
+                    </select>
+
+                    <!-- Observaciones -->
+                    <label for="observaciones"><i class="bi bi-chat-left-text-fill"></i> Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+
+                    <!-- Foto -->
+                    <label for="imagen"><i class="bi bi-camera-fill"></i> Foto de la infracción</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" capture="environment" required>
+
+                    <!-- Video -->
+                    <label for="video"><i class="bi bi-camera-reels-fill"></i> Video de la infracción (opcional)</label>
+                    <input type="file" id="video" name="video" accept="video/*">
+
+                    <!-- Ubicación -->
+                    <input type="hidden" id="latitud" name="latitud">
+                    <input type="hidden" id="longitud" name="longitud">
+
+                    <!-- Botón de enviar -->
+                    <button type="submit"><i class="bi bi-send-fill"></i> Enviar</button>
+                </form>
+                <p id="estado"></p>
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
