@@ -1,0 +1,27 @@
+body {
+    background: #ebfaff7e;
+}
+
+.dashboard {
+    max-width: 95%;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: rgb(30, 71, 124);
+    font-weight: bold;
+}
+
+table {
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
