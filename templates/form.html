@@ -33,7 +33,7 @@
 
                     <!-- Número de documento -->
                     <label for="documento"><i class="bi bi-123"></i> Número de documento</label>
-                    <input type="text" id="documento" name="documento" required pattern="[0-9]{5,20}" title="Solo números (mínimo 5 dígitos)">
+                    <input type="text" id="documento" name="documento" required pattern="^[0-9]{5,20}$" title="Solo números enteros (5 a 20 dígitos)" inputmode="numeric">
 
                     <!-- Correo electrónico -->
                     <label for="correo"><i class="bi bi-envelope-fill"></i> Correo electrónico</label>
@@ -41,7 +41,7 @@
 
                     <!-- Teléfono -->
                     <label for="telefono"><i class="bi bi-telephone-fill"></i> Teléfono</label>
-                    <input type="text" id="telefono" name="telefono" required pattern="[0-9]{7,15}" title="Solo números (mínimo 7 dígitos)">
+                    <input type="text" id="telefono" name="telefono" required pattern="^\d{10}$" title="Debe contener exactamente 10 dígitos numéricos" inputmode="numeric">
 
                     <!-- Tipo de infracción -->
                     <label for="infraccion"><i class="bi bi-exclamation-triangle-fill"></i> Tipo de infracción</label>
