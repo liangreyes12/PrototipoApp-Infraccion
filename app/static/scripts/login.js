@@ -12,6 +12,7 @@ function togglePassword() {
     }
 }
 
+//CORREGIR ESTE CODIGO PARA PODER INICIAR SESION CORRECTAMENTE EL USUARIO.
 document.getElementById('login-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('email').value;

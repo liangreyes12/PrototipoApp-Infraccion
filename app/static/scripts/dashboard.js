@@ -1,3 +1,4 @@
+//CORREGIR TODO PARA QUE SE ADAPTE A TRAER LOS DATOS DE LA BASE DE DATOS
 const registros = [
     {
       nombre: "Juan Pérez",
